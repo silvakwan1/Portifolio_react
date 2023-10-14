@@ -10,6 +10,9 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+tailwind.config.js
+vite.config.js
+postcss.config.js
 *.local
 
 # Editor directories and files
