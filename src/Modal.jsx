@@ -20,7 +20,7 @@ const Modal = () => {
   };
 
   const urlAPIWhatsApp =
-    "https://wa.me/55619996291203?text=oii%20queria%20fazer%20um%20or%C3%A7amento";
+    "https://wa.me/5561996291203?text=oii%20queria%20fazer%20um%20or%C3%A7amento";
 
   const preventModalClick = (e) => {
     e.stopPropagation();

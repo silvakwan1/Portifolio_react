@@ -1,5 +1,6 @@
 import Navbar from "./NavBar";
 import Header from "./Header";
+import AboultMe from "./AboutMe";
 // import { Link, Element } from 'react-scroll';
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
     <>
       <Navbar />
       <Header />
+      <main>
+        <AboultMe />
+      </main>
     </>
   );
 }

@@ -36,7 +36,7 @@ function Navbar() {
         Kauan<span className="text-3xl text-[#F2F2F2]">dev</span>
       </h2>
       <ul className="flex items-center gap-5 ">
-        <Itens item="About" />
+        <Itens item="About" to="AboultMe" />
         <Itens item="Skills" />
         <Itens item="Projects" />
       </ul>
