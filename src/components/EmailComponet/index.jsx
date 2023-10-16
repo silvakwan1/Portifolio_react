@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function EmailComponent() {
-  const [email, setEmail] = useState("Kaundev@gmail.com");
+  const [email, setEmail] = useState("kawandev07@gmail.com");
 
   const copyEmailToClipboard = () => {
     const input = document.createElement("input");

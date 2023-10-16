@@ -31,7 +31,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="flex items-center justify-between px-7 h-16 text-[#fff]">
+    <nav className="flex items-center justify-between px-7 miniphon:px-5 h-16 text-[#fff]">
       <h2 className=" text-4xl cursor-pointer text-[#828282] logo:hidden">
         Kauan<span className="text-3xl text-[#F2F2F2]">dev</span>
       </h2>

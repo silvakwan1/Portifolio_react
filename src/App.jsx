@@ -1,4 +1,5 @@
 import Navbar from "./NavBar";
+import Header from "./Header";
 // import { Link, Element } from 'react-scroll';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <Header />
     </>
   );
 }

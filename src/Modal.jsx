@@ -4,7 +4,7 @@ import close from "./assets/close.svg";
 import ItensImage from "./components/ItensImage";
 import LogoGithub from "./assets/github-logo.svg";
 import Logolinkedin from "./assets/linkedin-logo.svg";
-const Modal = (props) => {
+const Modal = () => {
   const [copy, setCopy] = useState(false);
 
   document.addEventListener("copy", () => {
@@ -52,11 +52,11 @@ const Modal = (props) => {
   };
   return (
     <div
-      className="top-0 left-0 w-full h-full absolute backdrop-blur-sm"
+      className="top-0 left-0 w-full h-full absolute backdrop-blur-sm z-50"
       onClick={creatEvent}
     >
       <div
-        className="modal z-10 py-7 px-10 flex flex-col h-80 w-96 absolute bg-modal top-0 right-0 rounded-bl-xl"
+        className="modal z-10 py-7 px-10 flex flex-col h-80 w-96 miniphon:w-80 absolute bg-modal top-0 right-0 rounded-bl-xl"
         onClick={preventModalClick}
       >
         <button
