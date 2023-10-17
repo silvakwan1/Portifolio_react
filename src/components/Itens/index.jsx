@@ -4,9 +4,11 @@ function Item(props) {
   const { to, item } = props;
 
   return (
-    <Link to={to} smooth={true} duration={500}>
-      <li className="list-none cursor-pointer text-xl">{item}</li>
-    </Link>
+    <li className="list-none cursor-pointer text-xl">
+      <Link to={to} smooth={true} duration={500}>
+        {item}
+      </Link>
+    </li>
   );
 }
 

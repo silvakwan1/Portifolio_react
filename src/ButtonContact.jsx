@@ -19,8 +19,12 @@ function ButtonContact() {
   return (
     <>
       <button className="flex gap-2 items-center text-xl" onClick={activeModal}>
-        <img className="h-[30px]" src={maxWidth ? menu : emailLogo} />
-        {maxWidth ? null : "Contact me"}
+        <img
+          className="h-[30px]"
+          src={maxWidth ? menu : emailLogo}
+          alt={maxWidth ? "Logo Menu" : "Logo email"}
+        />
+        {maxWidth ? <span className="hidden">home</span> : "Contact me"}
       </button>
       {modal && <Modal />}
     </>
