@@ -1,6 +1,7 @@
 import Navbar from "./NavBar";
 import Header from "./Header";
 import AboultMe from "./AboutMe";
+import Skills from "./Skills";
 // import { Link, Element } from 'react-scroll';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Header />
       <main>
         <AboultMe />
+        <Skills />
       </main>
     </>
   );

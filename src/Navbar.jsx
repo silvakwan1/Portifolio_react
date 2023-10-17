@@ -37,7 +37,7 @@ function Navbar() {
       </h2>
       <ul className="flex items-center gap-5 ">
         <Itens item="About" to="AboultMe" />
-        <Itens item="Skills" />
+        <Itens item="Skills" to="Skills" />
         <Itens item="Projects" />
       </ul>
 
