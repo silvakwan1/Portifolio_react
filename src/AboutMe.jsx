@@ -29,12 +29,16 @@ function AboultMe() {
             <span className="block text-linearGren text-[12px]">Projects</span>
           </div>
           <div className="bg-[#222]  shadow-lg shadow-slate-500 rounded-xl px-5 py-3 relative">
-            <p className="whitespace-nowrap mr-10 text-2xl">Freelancer</p>
+            <p className="whitespace-nowrap mr-10 text-2xl underline">
+              Freelancer
+            </p>
             <span className="absolute right-3 top-1/3 text-2xl text-linearGren">
               {"{ "}
               {"}"}
             </span>
-            <span className="block text-linearGren text-[12px]">Hire me!</span>
+            <span className="block text-linearGren text-[12px] underline">
+              Hire me!
+            </span>
           </div>
         </div>
       </section>
