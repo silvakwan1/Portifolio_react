@@ -2,6 +2,7 @@ import Navbar from "./NavBar";
 import Header from "./Header";
 import AboultMe from "./AboutMe";
 import Skills from "./Skills";
+import Project from "./project";
 // import { Link, Element } from 'react-scroll';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <main>
         <AboultMe />
         <Skills />
+        <Project />
       </main>
     </>
   );

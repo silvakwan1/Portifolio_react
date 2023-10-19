@@ -38,7 +38,7 @@ function Navbar() {
       <ul className="flex items-center gap-5 ">
         <Itens item="About" to="AboultMe" />
         <Itens item="Skills" to="Skills" />
-        <Itens item="Projects" />
+        <Itens item="Projects" to="Project" />
       </ul>
 
       <ul className="flex gap-5 ">
