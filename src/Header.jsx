@@ -15,7 +15,7 @@ function Header() {
         </h1>
 
         <h2 className="xl:text-5xl miniphon:text-3xl  sm:text-4xl">
-          <Typical loop={1} steps={["", 1500, "Developer Front-end", 2000]} />
+          <Typical loop={1} steps={[" ", 1000, "Developer Front-end", 2000]} />
         </h2>
 
         <ul className="flex miniphon:flex-col miniphon:gap-2 flex-wrap gap-16 text-[#6A6A6A]">
