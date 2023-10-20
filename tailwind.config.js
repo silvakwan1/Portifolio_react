@@ -15,6 +15,11 @@ export default {
       screens: {
         logo: { max: "900px" },
         miniphon: { max: "639px" },
+        sp: { max: "340px" },
+      },
+      gridTemplateColumns: {
+        cardResponsiva: "repeat(auto-Fill, min(20rem))",
+        cardResponsiva2: "repeat(auto-Fill, min(18rem))",
       },
     },
   },
