@@ -24,6 +24,7 @@ function ButtonContact() {
           src={maxWidth ? menu : emailLogo}
           alt={maxWidth ? "Logo Menu" : "Logo email"}
         />
+
         {maxWidth ? <span className="hidden">home</span> : "Contact me"}
       </button>
       {modal && <Modal />}

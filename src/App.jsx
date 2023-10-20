@@ -3,7 +3,7 @@ import Header from "./Header";
 import AboultMe from "./AboutMe";
 import Skills from "./Skills";
 import Project from "./project";
-// import { Link, Element } from 'react-scroll';
+import Footer from "./footer";
 
 function App() {
   let currentWidth = window.innerWidth;
@@ -25,8 +25,10 @@ function App() {
         <Skills />
         <Project />
       </main>
+
+      <Footer />
     </>
   );
 }
-// bg-gradient-to-r from-cyan-500 to-blue-500
+
 export default App;

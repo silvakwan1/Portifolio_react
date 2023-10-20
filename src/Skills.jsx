@@ -17,6 +17,7 @@ function Skills() {
       <Element name="Skills">
         <h2 className="text-linearGren text-2xl mb-5">Skills ( )</h2>
       </Element>
+
       <div className="mb-6 flex gap-8 flex-wrap">
         <ItensLogo
           name="JavaScript"
@@ -49,19 +50,23 @@ function Skills() {
           title="node.js"
           alt="logo node.js"
         />
+
         <ItensLogo
           name="tailwind"
           src={tailwindcss}
           title="tailwindcss"
           alt="logo tailwindcss"
         />
+
         <ItensLogo
           name="bootstrap"
           src={bootstrap}
           title="bootstrap"
           alt="logo bootstrap"
         />
+
         <ItensLogo name="git" src={git} title="git" alt="logo git" />
+
         <ItensLogo
           name="gitHub"
           src={gitHub}

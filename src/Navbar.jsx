@@ -20,6 +20,7 @@ function Navbar() {
           src={Logolinkedin}
           item="Linkedin"
         />
+
         <ItensImage
           href={urlGithub}
           alt="Logo do Github"
@@ -35,6 +36,7 @@ function Navbar() {
       <h2 className=" text-4xl cursor-pointer text-[#828282] logo:hidden">
         Kauan<span className="text-3xl text-[#F2F2F2]">dev</span>
       </h2>
+
       <ul className="flex items-center gap-5 ">
         <Itens item="About" to="AboultMe" />
         <Itens item="Skills" to="Skills" />

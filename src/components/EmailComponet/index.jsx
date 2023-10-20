@@ -9,7 +9,9 @@ function EmailComponent() {
     document.body.appendChild(input);
 
     input.select();
+
     input.setSelectionRange(0, 99999);
+
     document.execCommand("copy");
 
     document.body.removeChild(input);
@@ -21,7 +23,7 @@ function EmailComponent() {
   return (
     <p
       onClick={copyEmailToClipboard}
-      className="cursor-pointer inline-block border-b-4 border-indigo-500 text-xl"
+      className="cursor-pointer inline-block text-xl"
     >
       {email}
     </p>

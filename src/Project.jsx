@@ -8,7 +8,8 @@ function Project() {
       <Element name="Project">
         <h2 className="px-[11%] text-linearGren text-2xl mb-5">Project ( )</h2>
       </Element>
-      <div className="mb-60  grid grid-cols-cardResponsiva justify-center gap-5 px-8 sp:grid-cols-cardResponsiva2">
+
+      <div className="mb-10  grid grid-cols-cardResponsiva justify-center gap-5 px-8 sp:grid-cols-cardResponsiva2">
         <ProjectCard
           srcImg=""
           title="Project Tile goes here"
@@ -19,6 +20,7 @@ function Project() {
           urlCode="d"
           urlPreview="d"
         />
+
         <ProjectCard
           srcImg=""
           title="Project Tile goes here"
@@ -29,6 +31,7 @@ function Project() {
           urlCode="d"
           urlPreview="d"
         />
+
         <ProjectCard
           srcImg=""
           title="Project Tile goes here"
@@ -39,6 +42,7 @@ function Project() {
           urlCode="d"
           urlPreview="d"
         />
+
         <ProjectCard
           srcImg=""
           title="Project Tile goes here"
@@ -49,6 +53,7 @@ function Project() {
           urlCode="d"
           urlPreview="d"
         />
+
         <ProjectCard
           srcImg=""
           title="Project Tile goes here"
@@ -59,6 +64,7 @@ function Project() {
           urlCode="d"
           urlPreview="d"
         />
+
         <ProjectCard
           srcImg=""
           title="Project Tile goes here"

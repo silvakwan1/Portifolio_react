@@ -52,7 +52,7 @@ const Modal = () => {
   };
   return (
     <div
-      className="top-0 left-0 w-full h-full absolute backdrop-blur-sm z-50"
+      className="top-0 left-0 w-full h-full fixed backdrop-blur-sm z-50 "
       onClick={creatEvent}
     >
       <div
@@ -67,17 +67,17 @@ const Modal = () => {
         </button>
         <ul className="flex flex-col gap-3">
           <li>
-            <EmailComponet />
+            <EmailComponet classAlt="" />
           </li>
 
           <li>
             <a
-              className=" inline-block border-b-4 border-indigo-500 text-xl"
+              className=" inline-block text-xl"
               href={urlAPIWhatsApp}
               target="_blank"
               rel="noopener noreferrer"
             >
-              +55 (61) 996291203
+              (61) 996291203
             </a>
           </li>
           {maxWidth ? renderIfWidthSm() : null}

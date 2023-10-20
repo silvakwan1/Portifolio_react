@@ -16,6 +16,7 @@ export default {
         logo: { max: "900px" },
         miniphon: { max: "639px" },
         sp: { max: "340px" },
+        minsp: { max: "420px" },
       },
       gridTemplateColumns: {
         cardResponsiva: "repeat(auto-Fill, min(20rem))",
