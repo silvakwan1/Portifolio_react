@@ -1,4 +1,4 @@
-import Itens from "./components/Itens";
+import Item from "./components/Item";
 import ItensImage from "./components/ItensImage";
 import LogoGithub from "./assets/github-logo.svg";
 import Logolinkedin from "./assets/linkedin-logo.svg";
@@ -19,9 +19,9 @@ function Footer() {
         </h2>
 
         <ul className="flex items-center gap-5">
-          <Itens item="About" to="AboultMe" />
-          <Itens item="Skills" to="Skills" />
-          <Itens item="Projects" to="Project" />
+          <Item name="About" to="AboultMe" />
+          <Item name="Skills" to="Skills" />
+          <Item name="Projects" to="Project" />
         </ul>
 
         <ul className="flex gap-3 minsp:flex-col-reverse flex-wrap-reverse">
