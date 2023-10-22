@@ -1,9 +1,9 @@
-import Navbar from "./NavBar";
-import Header from "./Header";
-import AboultMe from "./AboutMe";
-import Skills from "./Skills";
-import Project from "./project";
-import Footer from "./footer";
+import Navbar from "/src/NavBar";
+import Header from "/src/Header";
+import AboultMe from "/src/AboutMe";
+import Skills from "/src/Skills";
+import Project from "/src/project";
+import Footer from "/src/footer";
 
 function App() {
   let currentWidth = window.innerWidth;
