@@ -1,5 +1,5 @@
-import ItensLogo from "./components/ItensLogo";
 import { Element } from "react-scroll";
+import ItensLogo from "./components/ItensLogo";
 import reactLogo from "./assets/react.svg";
 import nodeJsLogo from "./assets/nodeJs_logo.svg";
 import javaScriptLogo from "./assets/javaScrip-logo.svg";
@@ -11,7 +11,7 @@ import tailwindcss from "./assets/tailwindcss_logo.svg";
 import git from "./assets/git-logo.svg";
 import gitHub from "./assets/github-logo.svg";
 
-function Skills() {
+export default function Skills() {
   return (
     <section className=" px-[11%] py-5 mx-auto flex flex-col justify-center text-white bg-[#161616]">
       <Element name="Skills">
@@ -20,62 +20,41 @@ function Skills() {
 
       <div className="mb-6 flex gap-8 flex-wrap">
         <ItensLogo
-          name="JavaScript"
-          src={javaScriptLogo}
-          title="javaScript"
-          alt="logo javaSvript"
+          imgAlt="logo javaSvript"
+          imgSrc={javaScriptLogo}
+          name="javaScript"
         />
 
-        <ItensLogo name="Html" src={htmlLogo} title="Html" alt="logo HTML" />
+        <ItensLogo imgAlt="logo HTML" imgSrc={htmlLogo} name="Html" />
 
-        <ItensLogo name="CSS" src={cssLogo} title="CSS" alt="logo CSS" />
+        <ItensLogo imgAlt="logo CSS" imgSrc={cssLogo} name="CSS" />
 
         <ItensLogo
+          imgAlt="logo Typescript"
+          imgSrc={TypescriptLogo}
           name="Typescript"
-          src={TypescriptLogo}
-          title="Typescript"
-          alt="logo Typescript"
         />
 
-        <ItensLogo
-          name="React"
-          src={reactLogo}
-          title="React"
-          alt="logo React"
-        />
+        <ItensLogo imgAlt="logo React" imgSrc={reactLogo} name="React" />
+
+        <ItensLogo imgAlt="logo node.js" imgSrc={nodeJsLogo} name="node.js" />
 
         <ItensLogo
-          name="node.js"
-          src={nodeJsLogo}
-          title="node.js"
-          alt="logo node.js"
-        />
-
-        <ItensLogo
+          imgAlt="logo tailwind"
+          imgSrc={tailwindcss}
           name="tailwind"
-          src={tailwindcss}
-          title="tailwindcss"
-          alt="logo tailwindcss"
         />
 
         <ItensLogo
+          imgAlt="logo bootstrap"
+          imgSrc={bootstrap}
           name="bootstrap"
-          src={bootstrap}
-          title="bootstrap"
-          alt="logo bootstrap"
         />
 
-        <ItensLogo name="git" src={git} title="git" alt="logo git" />
+        <ItensLogo imgAlt="logo git" imgSrc={git} name="git" />
 
-        <ItensLogo
-          name="gitHub"
-          src={gitHub}
-          title="gitHub"
-          alt="logo gitHub"
-        />
+        <ItensLogo imgAlt="logo gitHub" imgSrc={gitHub} name="gitHub" />
       </div>
     </section>
   );
 }
-
-export default Skills;

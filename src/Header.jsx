@@ -3,7 +3,6 @@ import myAvatar from "./assets/My-avatar.png";
 import reactLogo from "./assets/react.svg";
 import nodeJsLogo from "./assets/nodeJs_logo.svg";
 import javaScriptLogo from "./assets/javaScrip-logo.svg";
-
 function Header() {
   return (
     <header className="flex py-5 sm:py-10  md:py-20 px-2 sm:px-4 justify-around flex-wrap sm:gap-7 miniphon:gap-7 mb-16 mt-16 miniphon:mt-5">
