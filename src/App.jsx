@@ -2,7 +2,7 @@ import Navbar from "./Navbar";
 import Header from "./Header";
 import AboultMe from "./AboutMe";
 import Skills from "./Skills";
-import Project from "./project";
+import Project from "./Project";
 import Footer from "./Footer";
 
 function App() {
