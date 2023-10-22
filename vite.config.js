@@ -6,7 +6,8 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "/src/NavBar": "/path-to-your-NavBar-component/NavBar",
+      // Use caminhos relativos, não caminhos absolutos
+      "@src": "/path-to-your-NavBar-component", // O '@src' é um exemplo, você pode personalizá-lo.
     },
   },
 });
