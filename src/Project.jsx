@@ -24,17 +24,16 @@ export default function Project() {
         />
 
         <ProjectCard
-          title="Api de fazes motivacional"
+          title="Api de fases motivacional"
           description="Nossa API Node.js fornece frases motivacionais aleatórias para inspirar e motivar seus usuários. Integre facilmente em seus aplicativos para promover positividade e bem-estar."
           tech=" JavaScript, node.js"
-          urlCode="https://github.com/silvakwan1/api-mensagem"
           urlPreview="https://api-mensagem.vercel.app/api/motivational"
         />
 
         <ProjectCard
           srcImg={imgCard}
           altImg="img do site card cred"
-          title="verificador de cartão"
+          title="Verificador de cartão"
           description="Fiz um formulário que verifica se o número do cartão de crédito é válido."
           tech="HTML,CSS e JavaScript"
           urlCode="https://github.com/silvakwan1/card-credt"
@@ -44,7 +43,7 @@ export default function Project() {
         <ProjectCard
           srcImg={imgcalculater}
           altImg="img do site calculadora"
-          title="calculadora"
+          title="Calculadora"
           description="A nossa Calculadora Web Interativa, desenvolvida com HTML, CSS e JavaScript, é uma ferramenta prática para resolver uma ampla gama de cálculos."
           tech="HTML,CSS e JavaScript"
           urlCode="https://github.com/silvakwan1/calculator"

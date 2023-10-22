@@ -22,38 +22,38 @@ export default function Skills() {
         <ItensLogo
           imgAlt="logo javaSvript"
           imgSrc={javaScriptLogo}
-          name="javaScript"
+          name="JavaScript"
         />
 
-        <ItensLogo imgAlt="logo HTML" imgSrc={htmlLogo} name="Html" />
+        <ItensLogo imgAlt="logo HTML" imgSrc={htmlLogo} name="HTML" />
 
         <ItensLogo imgAlt="logo CSS" imgSrc={cssLogo} name="CSS" />
 
         <ItensLogo
-          imgAlt="logo Typescript"
+          imgAlt="logo TypeScript"
           imgSrc={TypescriptLogo}
-          name="Typescript"
+          name="TypeScript"
         />
 
         <ItensLogo imgAlt="logo React" imgSrc={reactLogo} name="React" />
 
-        <ItensLogo imgAlt="logo node.js" imgSrc={nodeJsLogo} name="node.js" />
+        <ItensLogo imgAlt="logo node.js" imgSrc={nodeJsLogo} name="Node.js" />
 
         <ItensLogo
           imgAlt="logo tailwind"
           imgSrc={tailwindcss}
-          name="tailwind"
+          name="Tailwind"
         />
 
         <ItensLogo
           imgAlt="logo bootstrap"
           imgSrc={bootstrap}
-          name="bootstrap"
+          name="Bootstrap"
         />
 
-        <ItensLogo imgAlt="logo git" imgSrc={git} name="git" />
+        <ItensLogo imgAlt="logo git" imgSrc={git} name="Git" />
 
-        <ItensLogo imgAlt="logo gitHub" imgSrc={gitHub} name="gitHub" />
+        <ItensLogo imgAlt="logo gitHub" imgSrc={gitHub} name="GitHub" />
       </div>
     </section>
   );

@@ -12,7 +12,11 @@ export default function IconUrl({ urlCode, urlPreview }) {
             className="flex  gap-2 miniphon:gap-1 items-center whitespace-nowrap"
             href={urlPreview}
           >
-            <img className="w-6 h-6 miniphon:w-4 miniphon:h-4" src={iconLInk} />
+            <img
+              className="w-6 h-6 miniphon:w-4 miniphon:h-4"
+              src={iconLInk}
+              alt="Icon de link"
+            />
             Live Preview
           </a>
           <a
@@ -21,12 +25,12 @@ export default function IconUrl({ urlCode, urlPreview }) {
             className="flex  gap-2 miniphon:gap-1 items-center whitespace-nowrap "
             href={urlCode}
           >
-            {" "}
             <img
               className="w-6 h-6 miniphon:w-4 miniphon:h-4"
               src={githubLogo}
-            />{" "}
-            View Code{" "}
+              alt="logo git hub"
+            />
+            View Code
           </a>
         </>
       ) : urlCode ? (
@@ -37,12 +41,12 @@ export default function IconUrl({ urlCode, urlPreview }) {
             className="flex  gap-2 miniphon:gap-1 items-center whitespace-nowrap "
             href={urlCode}
           >
-            {" "}
             <img
               className="w-6 h-6 miniphon:w-4 miniphon:h-4"
               src={githubLogo}
-            />{" "}
-            View Code{" "}
+              alt="logo git hub"
+            />
+            View Code
           </a>
         </>
       ) : urlPreview ? (
@@ -53,7 +57,11 @@ export default function IconUrl({ urlCode, urlPreview }) {
             className="flex  gap-2 miniphon:gap-1 items-center whitespace-nowrap"
             href={urlPreview}
           >
-            <img className="w-6 h-6 miniphon:w-4 miniphon:h-4" src={iconLInk} />
+            <img
+              className="w-6 h-6 miniphon:w-4 miniphon:h-4"
+              src={iconLInk}
+              alt="Icon de link"
+            />
             Live Preview
           </a>
         </>
