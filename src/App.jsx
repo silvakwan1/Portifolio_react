@@ -23,7 +23,6 @@ function App() {
       <main>
         <AboultMe />
         <Skills />
-        <Project />
       </main>
 
       <Footer />
