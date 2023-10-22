@@ -25,3 +25,5 @@ postcss.config.js
 *.njsproj
 *.sln
 *.sw?
+
+.vercel
