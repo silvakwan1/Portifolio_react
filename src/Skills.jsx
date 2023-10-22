@@ -1,4 +1,4 @@
-import ItensLogo from "./components/itensLogo";
+import ItensLogo from "./components/ItensLogo";
 import { Element } from "react-scroll";
 import reactLogo from "./assets/react.svg";
 import nodeJsLogo from "./assets/nodeJs_logo.svg";
