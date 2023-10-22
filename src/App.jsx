@@ -1,7 +1,6 @@
 import Navbar from "./Navbar";
 import Header from "./Header";
 import AboultMe from "./AboutMe";
-import Skills from "./Skills";
 
 import Footer from "./Footer";
 
@@ -22,7 +21,6 @@ function App() {
       <Header />
       <main>
         <AboultMe />
-        <Skills />
       </main>
 
       <Footer />
