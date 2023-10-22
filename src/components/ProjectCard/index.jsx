@@ -1,8 +1,14 @@
-import UrlIcon from "./urlIcon";
+import IconUrl from "./IconUrl";
 
-export default function ProjectCard(props) {
-  const { urlCode, urlPreview, tech, description, title, srcImg, alt } = props;
-
+export default function ProjectCard({
+  urlCode,
+  urlPreview,
+  tech,
+  description,
+  title,
+  srcImg,
+  altImg,
+}) {
   const ApiImg = () => {
     return (
       <div className="w-full h-full flex items-center justify-center bg-[#555]">
@@ -11,7 +17,7 @@ export default function ProjectCard(props) {
     );
   };
   const ImgSrc = () => {
-    return <img className="w-full h-full" src={srcImg} alt={alt} />;
+    return <img className="w-full h-full" src={srcImg} alt={altImg} />;
   };
 
   return (
@@ -22,7 +28,7 @@ export default function ProjectCard(props) {
         <p>{description}</p>
         <p>Tech stack : {tech}</p>
       </div>
-      <UrlIcon urlCode={urlCode} urlPreview={urlPreview} />
+      <IconUrl urlCode={urlCode} urlPreview={urlPreview} />
     </div>
   );
 }

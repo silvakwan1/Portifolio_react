@@ -1,7 +1,7 @@
 import githubLogo from "/src/assets/github-logo.svg";
 import iconLInk from "/src/assets/link-icon.svg";
 
-function UrlIcon({ urlCode, urlPreview }) {
+export default function IconUrl({ urlCode, urlPreview }) {
   return (
     <div className="px-4 flex justify-center gap-5 pb-5 underline text-linearGren">
       {urlCode && urlPreview ? (
@@ -61,4 +61,3 @@ function UrlIcon({ urlCode, urlPreview }) {
     </div>
   );
 }
-export default UrlIcon;

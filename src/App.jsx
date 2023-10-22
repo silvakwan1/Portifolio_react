@@ -3,7 +3,7 @@ import Header from "./Header";
 import AboultMe from "./AboutMe";
 import Footer from "./Footer";
 import Skills from "./Skills";
-
+import Project from "./Project";
 function App() {
   let currentWidth = window.innerWidth;
 
@@ -22,6 +22,7 @@ function App() {
       <main>
         <AboultMe />
         <Skills />
+        <Project />
       </main>
       <Footer />
     </>
