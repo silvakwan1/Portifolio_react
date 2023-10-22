@@ -1,4 +1,3 @@
-import Navbar from "/src/NavBar";
 import Header from "/src/Header";
 import AboultMe from "/src/AboutMe";
 import Skills from "/src/Skills";
