@@ -11,6 +11,7 @@ export default {
       },
       colors: {
         linearGren: "#70FF00",
+        newPink: "#710",
       },
       screens: {
         logo: { max: "900px" },
