@@ -6,15 +6,15 @@ import Project from "./project";
 import Footer from "./footer";
 
 function App() {
-  let currentWidth = window.innerWidth;
+  // let currentWidth = window.innerWidth;
 
-  window.addEventListener("resize", () => {
-    const newWidth = window.innerWidth;
-    if (newWidth !== currentWidth) {
-      currentWidth = newWidth;
-      location.reload();
-    }
-  });
+  // window.addEventListener("resize", () => {
+  //   const newWidth = window.innerWidth;
+  //   if (newWidth !== currentWidth) {
+  //     currentWidth = newWidth;
+  //     location.reload();
+  //   }
+  // });
 
   return (
     <>
