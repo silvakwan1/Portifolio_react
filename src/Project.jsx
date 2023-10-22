@@ -1,5 +1,5 @@
 import { Element } from "react-scroll";
-import ProjectCard from "./components/ProjectCard";
+import ProjectCard from "./components/ProjectCard/index";
 
 import imgHbo from "/src/assets/img-progect/img-hbo.jpeg";
 import imgCard from "/src/assets/img-progect/img-card.jpeg";
