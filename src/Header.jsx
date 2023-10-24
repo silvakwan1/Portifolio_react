@@ -10,7 +10,7 @@ function Header() {
         <p className="sm:text-2xl">Hello, i am</p>
 
         <h1 className=" text-linearGren xl:text-6xl miniphon:text-4xl  sm:text-5xl">
-          &lt; Kauan silva /&gt;
+          &lt; Kauan Silva /&gt;
         </h1>
 
         <h2 className="xl:text-5xl miniphon:text-3xl  sm:text-4xl">
