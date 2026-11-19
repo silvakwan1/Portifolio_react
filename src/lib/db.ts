@@ -6,6 +6,7 @@ export interface ContactSubmissionRecord {
   id: number;
   name: string;
   email: string;
+  phone: string;
   project_type: string;
   message: string;
   created_at: string;
@@ -14,6 +15,7 @@ export interface ContactSubmissionRecord {
 export interface NewContactSubmissionInput {
   name: string;
   email: string;
+  phone: string;
   projectType: string;
   message: string;
 }
@@ -38,7 +40,7 @@ export function getResolvedDbPath(): string {
   const configured =
     process.env.SQLITE_DB_PATH?.trim() ||
     process.env.DATABASE_URL?.replace(/^file:/i, "").trim() ||
-    "./data/portfolio.sqlite";
+    (process.env.VERCEL ? "/tmp/portfolio.sqlite" : "./data/portfolio.sqlite");
 
   return path.isAbsolute(configured)
     ? configured
@@ -46,7 +48,7 @@ export function getResolvedDbPath(): string {
 }
 
 function getDb(): SqliteDatabase {
-  const targetPath = getResolvedDbPath();
+  let targetPath = getResolvedDbPath();
 
   if (dbInstance && activeDbPath === targetPath) {
     return dbInstance;
@@ -54,7 +56,11 @@ function getDb(): SqliteDatabase {
 
   const dir = path.dirname(targetPath);
   if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
+    try {
+      fs.mkdirSync(dir, { recursive: true });
+    } catch {
+      targetPath = "/tmp/portfolio.sqlite";
+    }
   }
 
   const sqliteModule = runtimeRequire("node:sqlite") as {
@@ -68,11 +74,20 @@ function getDb(): SqliteDatabase {
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       name TEXT NOT NULL,
       email TEXT NOT NULL,
+      phone TEXT NOT NULL DEFAULT '',
       project_type TEXT NOT NULL,
       message TEXT NOT NULL,
       created_at TEXT NOT NULL DEFAULT (datetime('now'))
     );
   `);
+
+  const columns = db.prepare("PRAGMA table_info(contact_submissions)").all() as Array<{
+    name?: string;
+  }>;
+  const hasPhoneColumn = columns.some((col) => col.name === "phone");
+  if (!hasPhoneColumn) {
+    db.exec(`ALTER TABLE contact_submissions ADD COLUMN phone TEXT NOT NULL DEFAULT '';`);
+  }
 
   dbInstance = db;
   activeDbPath = targetPath;
@@ -84,6 +99,7 @@ function toPlainRecord(raw: Record<string, unknown>): ContactSubmissionRecord {
     id: Number(raw.id),
     name: String(raw.name ?? ""),
     email: String(raw.email ?? ""),
+    phone: String(raw.phone ?? ""),
     project_type: String(raw.project_type ?? ""),
     message: String(raw.message ?? ""),
     created_at: String(raw.created_at ?? ""),
@@ -97,13 +113,14 @@ export function insertContactSubmission(
   const createdAt = new Date().toISOString();
 
   const insertStmt = db.prepare(`
-    INSERT INTO contact_submissions (name, email, project_type, message, created_at)
-    VALUES (?, ?, ?, ?, ?)
+    INSERT INTO contact_submissions (name, email, phone, project_type, message, created_at)
+    VALUES (?, ?, ?, ?, ?, ?)
   `);
 
   const result = insertStmt.run(
     input.name.trim(),
     input.email.trim(),
+    input.phone.trim(),
     input.projectType.trim(),
     input.message.trim(),
     createdAt
@@ -112,7 +129,7 @@ export function insertContactSubmission(
   const insertedId = Number(result.lastInsertRowid);
 
   const selectStmt = db.prepare(`
-    SELECT id, name, email, project_type, message, created_at
+    SELECT id, name, email, phone, project_type, message, created_at
     FROM contact_submissions
     WHERE id = ?
   `);
@@ -125,6 +142,7 @@ export function insertContactSubmission(
         id: insertedId,
         name: input.name.trim(),
         email: input.email.trim(),
+        phone: input.phone.trim(),
         project_type: input.projectType.trim(),
         message: input.message.trim(),
         created_at: createdAt,
@@ -134,7 +152,7 @@ export function insertContactSubmission(
 export function listContactSubmissions(): ContactSubmissionRecord[] {
   const db = getDb();
   const stmt = db.prepare(`
-    SELECT id, name, email, project_type, message, created_at
+    SELECT id, name, email, phone, project_type, message, created_at
     FROM contact_submissions
     ORDER BY id DESC
   `);

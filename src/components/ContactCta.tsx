@@ -22,9 +22,20 @@ const PROJECT_TYPES = [
   "Manutenção e Evolução",
 ] as const;
 
+function formatPhoneInput(value: string): string {
+  const digits = value.replace(/\D/g, "").slice(0, 11);
+  if (digits.length <= 2) return digits;
+  if (digits.length <= 6) return `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
+  if (digits.length <= 10) {
+    return `(${digits.slice(0, 2)}) ${digits.slice(2, 6)}-${digits.slice(6)}`;
+  }
+  return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
+}
+
 export function ContactCta() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [projectType, setProjectType] = useState<string>(PROJECT_TYPES[0]);
   const [message, setMessage] = useState("");
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
@@ -68,6 +79,7 @@ export function ContactCta() {
   function validateForm(): boolean {
     const trimmedName = name.trim();
     const trimmedEmail = email.trim();
+    const phoneDigits = phone.replace(/\D/g, "");
     const trimmedMessage = message.trim();
 
     if (trimmedName.length < 2) {
@@ -77,6 +89,11 @@ export function ContactCta() {
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedEmail)) {
       setErrorMsg("Por favor, informe um endereço de e-mail válido.");
+      return false;
+    }
+
+    if (phoneDigits.length < 10) {
+      setErrorMsg("Por favor, informe seu número de telefone/WhatsApp com DDD.");
       return false;
     }
 
@@ -102,6 +119,7 @@ export function ContactCta() {
         body: JSON.stringify({
           name: name.trim(),
           email: email.trim(),
+          phone: phone.trim(),
           projectType,
           message: message.trim(),
         }),
@@ -116,6 +134,7 @@ export function ContactCta() {
 
       setName("");
       setEmail("");
+      setPhone("");
       setProjectType(PROJECT_TYPES[0]);
       setMessage("");
       setSavedSuccess(true);
@@ -263,26 +282,52 @@ export function ContactCta() {
                 </div>
               </div>
 
-              <div className="mt-5">
-                <label
-                  htmlFor="contact-project-type"
-                  className="block text-sm font-semibold text-[var(--color-white)]"
-                >
-                  Tipo de projeto
-                </label>
-                <select
-                  id="contact-project-type"
-                  name="projectType"
-                  value={projectType}
-                  onChange={(e) => setProjectType(e.target.value)}
-                  className="mt-2 w-full rounded-xl border border-[var(--color-graphite)] bg-[#141418] px-4 py-3 text-sm text-[var(--color-white)] focus:border-[var(--color-yellow)]"
-                >
-                  {PROJECT_TYPES.map((type) => (
-                    <option key={type} value={type} className="bg-[#141418] text-[var(--color-white)]">
-                      {type}
-                    </option>
-                  ))}
-                </select>
+              <div className="mt-5 grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label
+                    htmlFor="contact-phone"
+                    className="block text-sm font-semibold text-[var(--color-white)]"
+                  >
+                    WhatsApp / Telefone
+                  </label>
+                  <input
+                    id="contact-phone"
+                    name="phone"
+                    type="tel"
+                    required
+                    autoComplete="tel"
+                    value={phone}
+                    onChange={(e) => setPhone(formatPhoneInput(e.target.value))}
+                    placeholder="(61) 99999-9999"
+                    className="mt-2 w-full rounded-xl border border-[var(--color-graphite)] bg-[#141418] px-4 py-3 text-sm text-[var(--color-white)] placeholder:text-banana-gray focus:border-[var(--color-yellow)]"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="contact-project-type"
+                    className="block text-sm font-semibold text-[var(--color-white)]"
+                  >
+                    Tipo de projeto
+                  </label>
+                  <select
+                    id="contact-project-type"
+                    name="projectType"
+                    value={projectType}
+                    onChange={(e) => setProjectType(e.target.value)}
+                    className="mt-2 w-full rounded-xl border border-[var(--color-graphite)] bg-[#141418] px-4 py-3 text-sm text-[var(--color-white)] focus:border-[var(--color-yellow)]"
+                  >
+                    {PROJECT_TYPES.map((type) => (
+                      <option
+                        key={type}
+                        value={type}
+                        className="bg-[#141418] text-[var(--color-white)]"
+                      >
+                        {type}
+                      </option>
+                    ))}
+                  </select>
+                </div>
               </div>
 
               <div className="mt-5">

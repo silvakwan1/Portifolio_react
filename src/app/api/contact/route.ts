@@ -8,12 +8,15 @@ export async function POST(request: Request) {
     const body = (await request.json()) as {
       name?: unknown;
       email?: unknown;
+      phone?: unknown;
       projectType?: unknown;
       message?: unknown;
     };
 
     const name = typeof body.name === "string" ? body.name.trim() : "";
     const email = typeof body.email === "string" ? body.email.trim() : "";
+    const phone = typeof body.phone === "string" ? body.phone.trim() : "";
+    const phoneDigits = phone.replace(/\D/g, "");
     const projectType =
       typeof body.projectType === "string" && body.projectType.trim().length > 0
         ? body.projectType.trim()
@@ -34,6 +37,13 @@ export async function POST(request: Request) {
       );
     }
 
+    if (phoneDigits.length < 10 || phoneDigits.length > 15) {
+      return NextResponse.json(
+        { error: "Por favor, informe um número de telefone/WhatsApp válido com DDD." },
+        { status: 400 }
+      );
+    }
+
     if (message.length < 10) {
       return NextResponse.json(
         { error: "Descreva brevemente sua ideia ou necessidade (mínimo de 10 caracteres)." },
@@ -44,6 +54,7 @@ export async function POST(request: Request) {
     const saved = insertContactSubmission({
       name,
       email,
+      phone,
       projectType,
       message,
     });

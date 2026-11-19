@@ -6,6 +6,7 @@ import {
   LogOut,
   RefreshCw,
   Mail,
+  Phone,
   Calendar,
   Briefcase,
   User,
@@ -171,6 +172,18 @@ export function AdminDashboardClient({
                       <Mail className="h-3.5 w-3.5 text-[var(--color-yellow)]" aria-hidden="true" />
                       {item.email}
                     </a>
+                    {item.phone && (
+                      <a
+                        href={`tel:${item.phone.replace(/\D/g, "")}`}
+                        className="inline-flex items-center gap-1.5 font-mono text-xs text-[var(--color-gray)] hover:text-[var(--color-yellow)] sm:text-sm"
+                      >
+                        <Phone
+                          className="h-3.5 w-3.5 text-[var(--color-yellow)]"
+                          aria-hidden="true"
+                        />
+                        {item.phone}
+                      </a>
+                    )}
                   </div>
 
                   <div className="flex flex-wrap items-center gap-2.5">

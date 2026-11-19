@@ -1,26 +1,26 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { CONTACT_INFO } from "@/data/contact";
 import { PROJECTS } from "@/data/projects";
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
+const spaceGrotesk = localFont({
+  src: "./fonts/SpaceGrotesk.woff2",
+  weight: "400 700",
   variable: "--font-display",
   display: "swap",
 });
 
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+const plusJakarta = localFont({
+  src: "./fonts/PlusJakartaSans.woff2",
+  weight: "400 700",
   variable: "--font-sans",
   display: "swap",
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
+const jetbrainsMono = localFont({
+  src: "./fonts/JetBrainsMono.woff2",
+  weight: "400 700",
   variable: "--font-mono",
   display: "swap",
 });
