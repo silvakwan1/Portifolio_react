@@ -66,42 +66,6 @@ export const PROJECTS: ProjectItem[] = [
     featured: true,
   },
   {
-    id: "hbo-clone",
-    title: "Clone do HBO Max",
-    category: "Interface Web Responsiva",
-    description:
-      "Reconstrução visual da interface do serviço de streaming HBO Max com foco em fidelidade de layout, hierarquia visual e responsividade.",
-    problem:
-      "Estruturar páginas promocionais ricas em mídia mantendo organização visual, leitura clara de planos e adaptação fluida entre telas.",
-    solution:
-      "Implementação em HTML5 e CSS3 explorando grid, flexbox, gradientes e seções modulares com navegação direta.",
-    technologies: ["HTML", "CSS"],
-    image: "/images/projects/hbo-clone.jpeg",
-    imageAlt:
-      "Prévia visual do projeto Clone do HBO Max desenvolvido com HTML e CSS",
-    liveUrl: "https://silvakwan1.github.io/HBOmax/",
-    repoUrl: "https://github.com/silvakwan1/HBOmax",
-    featured: false,
-  },
-  {
-    id: "api-mensagens",
-    title: "API de Frases Motivacionais",
-    category: "Back-end & API REST",
-    description:
-      "API em Node.js criada para servir frases motivacionais aleatórias em formato JSON para consumo rápido por aplicações web e móveis.",
-    problem:
-      "Aplicações front-end frequentemente precisam consumir mensagens dinâmicas de forma simples e padronizada sem depender de bancos complexos.",
-    solution:
-      "Serviço REST leve em Node.js e JavaScript expondo rota dedicada para retorno aleatório de mensagens estruturadas. (Endpoint externo em Vercel atualmente offline — exibido como demonstração conceitual.)",
-    technologies: ["Node.js", "JavaScript", "APIs REST"],
-    image: "/images/projects/api-mensagens-demo.png",
-    imageAlt:
-      "Demonstração conceitual do contrato JSON da API de Frases Motivacionais em Node.js",
-    repoUrl: "https://github.com/silvakwan1/api-mensagem",
-    isConceptualDemo: true,
-    featured: false,
-  },
-  {
     id: "skillpack-cli",
     title: "skillpack-cli (silvakwan1/skillpack-cli)",
     category: "CLI & Ferramenta Open Source",
